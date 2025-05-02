@@ -8,11 +8,11 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://yendouboamehq.github.io',
-baseUrl: '/dev-bookmarks/',
-organizationName: 'YendouboameHQ', // ton pseudo GitHub
-projectName: 'dev-bookmarks',      // nom du repo
-
-  deploymentBranch: 'gh-pages',           // ← Branche de déploiement
+  baseUrl: '/dev-bookmarks/',
+  organizationName: 'YendouboameHQ',
+  projectName: 'dev-bookmarks',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -25,21 +25,20 @@ projectName: 'dev-bookmarks',      // nom du repo
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl:
-            'https://github.com/YendouboameHQ/dev-bookmarks/edit/main/',
+          editUrl: 'https://github.com/YendouboameHQ/dev-bookmarks/edit/main/',
         },
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
-  themeConfig: ({
+  themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Dev Bookmarks',
@@ -70,7 +69,7 @@ projectName: 'dev-bookmarks',      // nom du repo
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),
+  },
 };
 
 export default config;
